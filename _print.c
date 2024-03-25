@@ -32,12 +32,18 @@ int _printf(const char *format, ...)
         	}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			char *s = va_arg(argumentList, char *);
-                	while (*s != '\0')
+			int j;
+			char *str = va_arg(argumentList, char *);
+
+			if (str == NULL)
+				str = "(null)";
+			
+			for (j = 0; str[j]; j++)
 			{
-                    		_putchar(*s);
-                    		s++;
-                	}
+				_putchar(str[j]);
+			}
+			
+			return (j);
 		}
 
 
