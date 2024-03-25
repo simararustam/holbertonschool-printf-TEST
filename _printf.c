@@ -39,6 +39,11 @@ int _printf(const char *format, ...)
 		{
 			_putchar('%');
 		}
+		else if (format[i] == '%' && format[i + 1] == '!')
+		{
+			_putchar("%!");
+			_putchar("%!\n");
+		}
 		numChar++;
 	}
 	_putchar('\n');
