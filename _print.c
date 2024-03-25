@@ -34,15 +34,11 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			int j;
-			char *str;
-
-			str = va_arg(argumentList, char *);
-			if (str == NULL)
-			str = "(null)";
-	
-			for (j = 0; str[j]; j++)
-				_putchar(str[j]);
-			return (i);
+			for (int j = 0; str[j] != '\0'; ++j)
+			{
+        			// Write each character to standard output (stdout)
+        			write(1, &str[j], 1);
+    			}
 		}
 
 
