@@ -1,8 +1,5 @@
-#ifndef _MAIN_H
-#define _MAIN_H
-
-/*Function prortypes writed here*/
+#ifndef HH
+#define HH
 int _printf(const char *format, ...);
-void _putchar(char c);
-void _puts(char *str);
+int _putchar(char c);
 #endif
