@@ -48,7 +48,6 @@ int _printf(const char *format, ...)
 			for (j = 0; str[j] != '\0'; j++)
 				count_fun += _putchar(str[j]);
 				
-			_putchar('\n');
 			return (count_fun);
 		}
 
