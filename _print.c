@@ -44,7 +44,7 @@ int _printf(const char *format, ...)
 			{
 				_putchar(str[j]);
 			}
-			_putchar('\n');
+			/*_putchar('\n');*/
 			return (j);
 		}
 
