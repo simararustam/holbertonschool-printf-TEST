@@ -6,7 +6,7 @@
  * @c: character
  * Return: void
  */
-void _putchar(char c)
+int _putchar(char c)
 {
 	/*In write function 1st parameter used to 
 	 * print or input. 1-print 0-input.
