@@ -41,7 +41,7 @@ int _printf(const char *format, ...)
 			str = "(null)";
 	
 			for (j = 0; str[j] != '\0'; j++)
-		_		_putchar(str[j]);
+				_putchar(str[j]);
 			return (i);
 		}
 
