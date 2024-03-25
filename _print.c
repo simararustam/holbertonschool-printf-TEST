@@ -49,18 +49,9 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		
-		else if (format[i] == '%' && format[i + 1] != '%' && format[i + 1] != '\0')
+		else if (format[i] == '%'  && format[i + 1] != '%')
 		{
-			
-			if (format[i + 1] != '%' && format[i + 1] != '\0')
-			{
-				_putchar(format[i]);
-				i++;
-			}
-			else
-			{
-				return (-1);
-			}
+			_putchar(format[i]);
 		}
 	
 
