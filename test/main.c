@@ -3,7 +3,8 @@
 int main(void)
 {
 	char c = 'a';
-
+	
+	_printf("%");
 	_printf("Simara");
 	_printf("simar%c", c);
 	_printf("%s", "string");
