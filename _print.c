@@ -25,7 +25,7 @@ int _printf(const char *format, ...)
         /*If there is a % sign and after % sign there is c print character*/
         if (format[i] == '%' && format[i + 1] == 'c')
         {
-            putchar(va_arg(argumentList, int));
+            _putchar(va_arg(argumentList, int));
             i++;
         }
 
