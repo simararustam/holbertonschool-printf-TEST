@@ -53,6 +53,7 @@ int _printf(const char *format, ...)
 		{
     			return (-1);
 			i++;
+			_putchar('\n');
 		}
 
         
