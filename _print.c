@@ -34,6 +34,7 @@ int _printf(const char *format, ...)
 		{
 			_puts(va_arg(argumentList, char *));
 			i++;
+			length = length - 1;
 		}
 
 
