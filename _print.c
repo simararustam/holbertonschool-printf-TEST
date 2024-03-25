@@ -53,10 +53,14 @@ int _printf(const char *format, ...)
 		{
 			
 			if (format[i + 1] != '%' && format[i + 1] != '\0')
+			{
 				_putchar(format[i]);
 				i++;
+			}
 			else
+			{
 				return (-1);
+			}
 		}
 	
 
