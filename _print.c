@@ -48,16 +48,15 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			i++;
 		}
-		
-		else if (format[i] == '%'  && format[i + 1] != '%')
-		{
-			_putchar(format[i]);
-		}
 
 		else if (format[0] == '%'  && format[1] == '\0')
 		{
 			return (-1);
-			length--;
+		}
+		
+		else if (format[i] == '%'  && format[i + 1] != '%')
+		{
+			_putchar(format[i]);
 		}
 	
 
