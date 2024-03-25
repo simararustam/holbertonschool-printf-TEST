@@ -5,19 +5,17 @@
  * @str: string
  * Return: void
  */
-void _puts(char *str)
+int _puts(char *str)
 {
-	int length = 0;
-
-	while (*(length + str) != '\0')
+	int length;
+	
+	if (str)
 	{
-		if (*(length + str) != '"')
+		for (length = 0; str[length] != '\0'; length++)
 		{
-			_putchar(*(str + length));
-		}
-
-		length++;
+			_putchar(str[length]);
+		}	
 	}
-
-	_putchar('\n');
+	
+	return (length);
 }
