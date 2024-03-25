@@ -33,6 +33,7 @@ int _printf(const char *format, ...)
             		_putchar(va_arg(argumentList, int));
             		i++;
         	}
+		/*Part of printing string*/
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			int stringLength = 0;
@@ -40,7 +41,11 @@ int _printf(const char *format, ...)
 			i++;
 			length += stringLength - 1;
 		}
-
+		/*Part of printting '%'*/
+        	else if (format[i] == '%' && format[i + 1] == '%')
+        	{
+        		_putchar('%');
+			}
 
         
         	length++;
