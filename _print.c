@@ -36,16 +36,20 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			int j;
+			int count_fun = 0;
 			char *str = va_arg(argumentList, char *);
 
-			if (str == NULL)
+			if (!str)
 				str = "(null)";
-			for (j = 0; str[j]; j++)
-			{
-				_putchar(str[j]);
-			}
-			/*_putchar('\n');*/
-			return (j);
+
+			if (str[0] == '\0')
+				return (-1);
+
+			for (j = 0; str[j] != '\0'; j++)
+				count_fun += _putchar(str[j]);
+				
+			_putchar('\n');
+			return (count_fun);
 		}
 
 
