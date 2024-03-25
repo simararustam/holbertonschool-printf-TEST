@@ -10,7 +10,6 @@ int _printf(const char *format, ...)
 	va_list argumentList; /*List of Arguments*/
     	int length = 0; /*Number of characters*/
     	int i; /*i is used for loop. Index of format string*/
-	int stringLength;
 
     	va_start(argumentList, format); /*Initialize argumentiList*/
     
@@ -33,9 +32,9 @@ int _printf(const char *format, ...)
         	}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			stringLength = _puts(va_arg(argumentList, char *));
+			_puts(va_arg(argumentList, *char));
 			i++;
-			length = length + stringLength - 1;
+			length = length - 1;
 		}
 
 
