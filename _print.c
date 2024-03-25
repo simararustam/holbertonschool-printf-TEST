@@ -23,6 +23,7 @@ int _printf(const char *format, ...)
         	{
             		/*If there is no type specifier just print what we have*/
             		_putchar(format[i]);
+			i++;
         	}
         
 		/*Part of printing character*/
