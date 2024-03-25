@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 			length += stringLength - 1;
 		}
 		/*Part of printting '%'*/
-        	else if (format[i] == '%' && format[i + 1] != '\0' && format[i + 1] == '%')
+        	else if (format[i] == '%' && format[i + 1] == '%')
         	{
         		write(1, "%", 1);
 		}
