@@ -10,6 +10,7 @@ int _printf(const char *format, ...)
 	va_list argumentList; /*List of Arguments*/
     	int length = 0; /*Number of characters*/
     	int i; /*i is used for loop. Index of format string*/
+	int stringLength;
 
     	va_start(argumentList, format); /*Initialize argumentiList*/
     
@@ -34,7 +35,7 @@ int _printf(const char *format, ...)
 		{
 			_puts(va_arg(argumentList, char *));
 			i++;
-			length = length - 1;
+			length = length + stringLength - 1;
 		}
 
 
