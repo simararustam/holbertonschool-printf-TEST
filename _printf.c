@@ -39,10 +39,6 @@ int _printf(const char *format, ...)
 		{
 			_putchar('%');
 		}
-		else if (format[i] == '%' && format[i + 1] != '%')
-		{
-			_putchar(format[i]);
-		}
 		numChar++;
 	}
 	_putchar('\n');
