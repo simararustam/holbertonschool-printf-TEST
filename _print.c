@@ -32,9 +32,12 @@ int _printf(const char *format, ...)
         	}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			_puts(va_arg(argumentList, char *));
-			i++;
-			length--;
+			char *s = va_arg(argumentList, char *);
+                	while (*s != '\0')
+			{
+                    		_putchar(*s);
+                    		s++;
+                	}
 		}
 
 
