@@ -55,7 +55,7 @@ int _printf(const char *format, ...)
 
 			if (format[i] == '%' && format[i + 1] == '\0')
 			{
-				return (-1);
+				return (0);
 			}
 		}
 	
