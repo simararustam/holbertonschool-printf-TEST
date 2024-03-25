@@ -7,34 +7,44 @@
  */
 int _printf(const char *format, ...)
 {
-    va_list argumentList; /*List of Arguments*/
-    int length = 0; /*Number of characters*/
-    int i; /*i is used for loop. Index of format string*/
+	va_list argumentList; /*List of Arguments*/
+    	int length = 0; /*Number of characters*/
+    	int i; /*i is used for loop. Index of format string*/
+	int num; /*num is used for integer number*/
+	int divisor = 1; /**/
+i
+    	va_start(argumentList, format); /*Initialize argumentList*/
+    
+    	/*Loops and other thing need to be writed in between va_start and va_end*/
+    	for (i = 0; format[i] != '\0'; i++)
+    	{
+        	if (format[i] != '%')
+        	{
+            		/*If there is no type specifier just print what we have*/
+            		_putchar(format[i]);
+        	}
+        
+		/*Part of printing character*/
+        	/*If there is a % sign and after % sign there is c print character*/
+        	if (format[i] == '%' && format[i + 1] == 'c')
+       		{
+			/*we use int below. Because characters are promoted to int when passed as variable arguments.*/
+            		_putchar(va_arg(argumentList, int));
+            		i++;
+        	}
+		else if (format[i] == '%' && format[i + 1] == 's')
+		{
+			_putchar(va_arg(argumentList, char *));
+			i++;
+		}
 
-    va_start(argumentList, format); /*Initialize argumentList*/
-    
-    /*Loops and other thing need to be writed in between va_start and va_end*/
-    for (i = 0; format[i] != '\0'; i++)
-    {
-        if (format[i] != '%')
-        {
-            /*If there is no type specifier just print what we have*/
-            _putchar(format[i]);
-        }
-        
-        /*If there is a % sign and after % sign there is c print character*/
-        if (format[i] == '%' && format[i + 1] == 'c')
-        {
-            _putchar(va_arg(argumentList, int));
-            i++;
-        }
 
         
-        length++;
+        	length++;
         
-    }
+    	}
     
-    va_end(argumentList);
+    	va_end(argumentList);
     
-    return (length);
+    	return (length);
 }
