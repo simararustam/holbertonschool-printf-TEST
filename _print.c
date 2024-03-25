@@ -35,20 +35,10 @@ int _printf(const char *format, ...)
         	}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			int j;
-			char *str = va_arg(argumentList, char *);
-
-			if (!str)
-				str = "(null)";
-
-			if (str[0] == '\0')
-				return (-1);
-
-			while (str[j] != '\0')
-			{
-				_putchar(str[j]);
-				j++;
-			}
+			int stringLength = 0;
+			stringLength = _puts(va_arg(argumentList, char *));
+			i++;
+			length += stringLength - 1;
 		}
 
 
