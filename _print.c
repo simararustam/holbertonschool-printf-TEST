@@ -48,7 +48,7 @@ int _printf(const char *format, ...)
 		}
 
         
-        	/*length += 1;*/
+        	length += 1;
         
     	}
     
