@@ -36,7 +36,6 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			int j;
-			int count_fun = 0;
 			char *str = va_arg(argumentList, char *);
 
 			if (!str)
@@ -45,10 +44,11 @@ int _printf(const char *format, ...)
 			if (str[0] == '\0')
 				return (-1);
 
-			for (j = 0; str[j] != '\0'; j++)
-				count_fun += _putchar(str[j]);
-				
-			return (count_fun);
+			while (str[j] != '\0')
+			{
+				_putchar(str[j]);
+				j++;
+			}
 		}
 
 
