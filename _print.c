@@ -52,7 +52,7 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == '\0')
 		{
     			_putchar(' ');
-			length = length - 1;
+			length = 17 * (length - 1);
 		}
 
         
