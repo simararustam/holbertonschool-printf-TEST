@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
         	}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			_puts(va_arg(argumentList, *char));
+			_puts(va_arg(argumentList, char *));
 			i++;
 			length = length - 1;
 		}
