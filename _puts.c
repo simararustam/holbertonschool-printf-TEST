@@ -8,6 +8,10 @@
 int _puts(char *str)
 {
 	int length;
+	if (str == NULL)
+	{
+		str = "(null)";
+	}
 	
 	if (str)
 	{
