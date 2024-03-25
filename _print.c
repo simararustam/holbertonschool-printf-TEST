@@ -34,15 +34,15 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			int j;
-			char *str = va_arg(argumentList, char *);
+			char *str;
 
+			str = va_arg(argumentList, char *);
 			if (str == NULL)
-				str = "(null)";
-			
+			str = "(null)";
+	
 			for (j = 0; str[j] != '\0'; j++)
-				_putchar(str[j]);
-			
-			return (j);
+		_		_putchar(str[j]);
+			return (i);
 		}
 
 
