@@ -15,5 +15,5 @@ void _putchar(char c)
 	 * used for how many character we printi. In there we print 1
 	 * character. Because putchar print only 1 character 
 	 */
-	write(1, &c, 1);
+	return (write(1, &c, 1));
 }
