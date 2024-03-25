@@ -10,10 +10,8 @@ int _printf(const char *format, ...)
 	va_list argumentList; /*List of Arguments*/
     	int length = 0; /*Number of characters*/
     	int i; /*i is used for loop. Index of format string*/
-	int num; /*num is used for integer number*/
-	int divisor = 1; /**/
-i
-    	va_start(argumentList, format); /*Initialize argumentList*/
+
+    	va_start(argumentList, format); /*Initialize argumentiList*/
     
     	/*Loops and other thing need to be writed in between va_start and va_end*/
     	for (i = 0; format[i] != '\0'; i++)
@@ -34,7 +32,7 @@ i
         	}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			_putchar(va_arg(argumentList, char *));
+			_puts(va_arg(argumentList, char *));
 			i++;
 		}
 
