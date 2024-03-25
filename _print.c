@@ -35,18 +35,16 @@ int _printf(const char *format, ...)
         	}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			char *string = va_arg(argumentList, char *);
-			int stringLength = 0;
-				
-			/*Calculate length of string*/
-			while (string[stringLength] != '\0')
+			int j;
+			char *str = va_arg(argumentList, char *);
+
+			if (str == NULL)
+				str = "(null)";
+			for (j = 0; str[j]; j++)
 			{
-				stringLength++;
+				_putchar(str[j]);
 			}
-				
-			/*print string chacaters with number of characters in string*/
-			write(1, string, stringLength);
-			length += stringLength;
+			return (j);
 		}
 
 
