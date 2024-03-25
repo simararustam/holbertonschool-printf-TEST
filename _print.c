@@ -39,10 +39,8 @@ int _printf(const char *format, ...)
 			if (str == NULL)
 				str = "(null)";
 			
-			for (j = 0; str[j]; j++)
-			{
+			for (j = 0; str[j] != '\0'; j++)
 				_putchar(str[j]);
-			}
 			
 			return (j);
 		}
