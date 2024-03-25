@@ -19,7 +19,7 @@ int _printf(const char *format, ...)
         if (format[i] != '%')
         {
             /*If there is no type specifier just print what we have*/
-            putchar(format[i]);
+            _putchar(format[i]);
         }
         
         /*If there is a % sign and after % sign there is c print character*/
