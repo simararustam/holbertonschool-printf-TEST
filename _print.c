@@ -36,9 +36,10 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			char *str;
+			int stringLength = 0;
 			if (str == NULL)
 				str = "(null)";
-			int stringLength = 0;
+			
 			stringLength = _puts(va_arg(argumentList, char *));
 			i++;
 			length += stringLength - 1;
