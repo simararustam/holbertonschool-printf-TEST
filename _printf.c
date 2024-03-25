@@ -41,8 +41,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] == '!')
 		{
-			_putchar("%!");
-			_putchar("%!\n");
+			_putchar(format[i]);
 		}
 		numChar++;
 	}
