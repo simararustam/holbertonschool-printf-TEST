@@ -46,7 +46,6 @@ int _printf(const char *format, ...)
         	{
         		/*write(1, "%", 1);*/
 			_putchar('%');
-			format += 2;
 			length = length - 1;
 		}
 
