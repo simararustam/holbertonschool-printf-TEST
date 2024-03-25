@@ -33,12 +33,12 @@ int _printf(const char *format, ...)
         	}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			int j;
-			char *str;
-			for (j = 0; str[j] != '\0'; ++j)
+			int j = 0;
+    			char *str;
+			while (str[j] != '\0')
 			{
-        			// Write each character to standard output (stdout)
-        			write(1, &str[j], 1);
+        		_putchar(str[j]);
+        		++j;
     			}
 		}
 
