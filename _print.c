@@ -34,6 +34,7 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			int j;
+			char *str;
 			for (j = 0; str[j] != '\0'; ++j)
 			{
         			// Write each character to standard output (stdout)
