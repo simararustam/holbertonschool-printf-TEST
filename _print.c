@@ -49,10 +49,9 @@ int _printf(const char *format, ...)
 			i++;
 		}
 		
-		else if (format[i] == '%' && format[i + 1] == '\0')
+		else if (format[i] == '%' && format[i + 1] != '%')
 		{
-    			_putchar(' ');
-			length = 17 * (length - 1);
+    			return (-1);
 		}
 
         
