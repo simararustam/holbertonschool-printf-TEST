@@ -22,8 +22,10 @@ int _itoa(int value)
 	do {
 		temp /= 10;
 		size++;
-	} while (temp != 0);
+	} while (temp);
+	
 	str = malloc(size);
+	
 	if (str == NULL)
 		exit(EXIT_FAILURE);
 
@@ -31,7 +33,7 @@ int _itoa(int value)
 	do {
 		str[i++] = '0' + (n % 10);
 		n /= 10;
-	} while (n != 0);
+	} while (n > 0);
 	str[i] = '\0';
 
 	for (j = i - 1; j >= 0; j--)
