@@ -30,7 +30,7 @@ int _itoa(int value)
 
     	str = malloc((size + 1) * sizeof(char));
 	
-    	// Reset n to its original value for conversion to string
+    	/* Reset n to its original value for conversion to string */
     	n = temp;
     	i = 0;
     	do {
