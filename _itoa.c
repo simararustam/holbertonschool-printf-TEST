@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 /**
  *_itoa - change integer to string
  *@value: given integer
