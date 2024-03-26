@@ -31,8 +31,8 @@ int _printf(const char *format, ...)
 		{
 			/*
    			we use int below. Because characters are promoted to int
-   			when passed as variable arguments.
-      			*/
+      			when passed as variable arguments.
+	 		*/
 			_putchar(va_arg(argumentList, int));
 			i++;
 		}
@@ -45,9 +45,9 @@ int _printf(const char *format, ...)
 			length += stringLength - 1;
 		}
 		/*Part of printting '%'*/
-        	else if (format[i] == '%' && format[i + 1] == '%')
-        	{
-        		/*write(1, "%", 1);*/
+		else if (format[i] == '%' && format[i + 1] == '%')
+		{
+			/*write(1, "%", 1);*/
 			_putchar('%');
 			i++;
 		}
@@ -56,19 +56,17 @@ int _printf(const char *format, ...)
 		{
 			return (-1);
 		}
-		
+
 		else if (format[i] == '%'  && format[i + 1] != '%')
 		{
 			_putchar(format[i]);
 		}
-	
+        
+		length += 1;
 
-        
-        	length += 1;
-        
-    	}
-    
-    	va_end(argumentList);
-    
-    	return (length);
+	}
+
+	va_end(argumentList);
+
+	return (length);
 }
