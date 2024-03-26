@@ -11,37 +11,39 @@ int _itoa(int value)
 	char *str;
 	int size = 0, i = 0, j, n;
 
-	if (value < 0)
-	{
-		_putchar('-');
-		n = -value;
-		size++;
-	}
-	else if (value == 0)
-	{
-		n = value;
-		size++;
-	}
-	else
-		n = value;
+   	 if (value < 0) 
+   	 {
+		 putchar('-');
+		 n = -value;
+		 size++;
+    	} 
+    	else if (value == 0) 
+  		size++;
+    	else 
+        	n = value;
 
-	do {
-		n /= 10;
-		size++;
-	} while (n);
+    	temp = n;
+    	do {
+        	n /= 10;
+        	size++;
+    	} while (n);
 
-	str = malloc(size + 1);
+    	str = malloc((size + 1) * sizeof(char));
+	
+    	// Reset n to its original value for conversion to string
+    	n = temp;
+    	i = 0;
+    	do {
+        	str[i++] = '0' + (n % 10);
+        	n /= 10;
+    	} while (n);
 
-	i = 0;
-	do {
-		str[i++] = '0' + (n % 10);
-		n /= 10;
-	} while (n > 0);
+    	str[i] = '\0';
 
-	for (j = i; j >= 0; j--)
-	{
-		_putchar(str[j]);
-	}
-	free(str);
-	return (size);
+    	for (j = size - 1; j >= 0; j--) {
+        	putchar(str[j]);
+    	}
+
+    	free(str);
+    	return size;
 }
