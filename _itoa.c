@@ -1,8 +1,9 @@
 #include <stdio.h>
 #include "main.h"
 /**
- *
- *
+ *itoa - change integer to string
+ *@value: given integer
+ *Return: size of returned integer
  */
 int itoa(int value)
 {
