@@ -24,7 +24,7 @@ int _printf(const char *format, ...)
 			/*If there is no type specifier just print what we have*/
 			_putchar(format[i]);
 		}
-		
+
 		/*Part of printing character*/
 		/*If there is a % sign and after % sign there is c print character*/
 		if (format[i] == '%' && format[i + 1] == 'c')
