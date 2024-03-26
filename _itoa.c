@@ -13,6 +13,7 @@ int _itoa(int value)
 
 	if (value < 0)
 	{
+		_putchar('-');
 		n = -value;
 		size++;
 	}
@@ -25,8 +26,6 @@ int _itoa(int value)
 	str = (char*)malloc((size + 1) * sizeof(char));
 	
 	i = 0;
-	if (value < 0)
-		str[i++] = '-';
 	do {
 		str[i++] = '0' + (n % 10);
 		n /= 10;
