@@ -1,3 +1,5 @@
+#include "main.h"
+
 char *itoa(long int num, int base)
 {
 	static char *array = "0123456789abcdef";
