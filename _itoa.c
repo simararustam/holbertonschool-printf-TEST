@@ -13,7 +13,7 @@ int _itoa(int value)
 
    	 if (value < 0) 
    	 {
-		 putchar('-');
+		 _putchar('-');
 		 n = -value;
 		 size++;
     	} 
@@ -39,7 +39,7 @@ int _itoa(int value)
     	} while (n);
 
     	for (j = size - 1; j >= 0; j--) {
-        	putchar(str[j]);
+        	_putchar(str[j]);
     	}
 
     	free(str);
