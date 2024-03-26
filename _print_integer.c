@@ -9,7 +9,7 @@
  * @format: type specifier
  * Return: the number of characters printed
  */
-int _printf(const char *format, ...)
+int _printInteger(const char *format, ...)
 {
 	va_list argumentList; /*List of Arguments*/
 	int length = 0, i; /*Number of characters*/
