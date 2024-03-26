@@ -28,7 +28,7 @@ int _itoa(int value)
         	size++;
     	} while (n);
 
-    	str = malloc((size + 1) * sizeof(char));
+    	str = malloc((size) * sizeof(char));
 	
     	/* Reset n to its original value for conversion to string */
     	n = temp;
