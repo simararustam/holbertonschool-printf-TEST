@@ -16,10 +16,10 @@ int _printf(const char *format, ...)
 
 	va_start(argumentList, format); /*Initialize argumentiList*/
 
-    	/*Loops and other thing need to be writed in between va_start and va_end*/
+	/*Loops and other thing need to be writed in between va_start and va_end*/
 	for (i = 0; format[i] != '\0'; i++)
-    	{
-        	if (format[i] != '%')
+	{
+		if (format[i] != '%')
         	{
             		/*If there is no type specifier just print what we have*/
             		_putchar(format[i]);
