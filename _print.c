@@ -17,9 +17,7 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
-		{
 			_putchar(format[i]);
-		}
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
 			_putchar(va_arg(argumentList, int));
@@ -33,19 +31,21 @@ int _printf(const char *format, ...)
 			i++;
 			length += stringLength - 1;
 		}
+		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
+		{
+			length += _itoa(va_arg(argumentList, int));
+			i++;
+		}
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
 			_putchar('%');
 			i++;
 		}
 		else if (format[0] == '%'  && format[1] == '\0')
-		{
 			return (-1);
-		}
 		else if (format[i] == '%'  && format[i + 1] != '%')
-		{
 			_putchar(format[i]);
-		}
+
 		length += 1;
 	}
 	va_end(argumentList);
