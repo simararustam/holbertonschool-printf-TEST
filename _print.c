@@ -10,14 +10,14 @@
  */
 int _printf(const char *format, ...)
 {
-    va_list argumentList; /*List of Arguments*/
-    int length = 0; /*Number of characters*/
-    int i; /*i is used for loop. Index of format string*/
-
-    	va_start(argumentList, format); /*Initialize argumentiList*/
+	va_list argumentList; /*List of Arguments*/
+	int length = 0; /*Number of characters*/
+	int i; /*i is used for loop. Index of format string*/
+	
+	va_start(argumentList, format); /*Initialize argumentiList*/
 
     	/*Loops and other thing need to be writed in between va_start and va_end*/
-    	for (i = 0; format[i] != '\0'; i++)
+	for (i = 0; format[i] != '\0'; i++)
     	{
         	if (format[i] != '%')
         	{
