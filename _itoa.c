@@ -24,16 +24,13 @@ int _itoa(int value)
 		size++;
 	} while (temp);
 	
-	str = malloc(size + 1);
-	
-	if (str == NULL)
-		exit(EXIT_FAILURE);
+	str = malloc((size + 1) * (sizeof(char));
 
 	i = 0;
 	do {
 		str[i++] = '0' + (n % 10);
 		n /= 10;
-	} while (n > 0);
+	} while (n >= 0);
 	str[i] = '\0';
 
 	for (j = i - 1; j >= 0; j--)
