@@ -16,12 +16,10 @@ int _printf(const char *format, ...)
 
 	va_start(argumentList, format); /*Initialize argumentiList*/
 
-	/*Loops and other thing need to be writed in between va_start and va_end*/
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 		{
-			/*If there is no type specifier just print what we have*/
 			_putchar(format[i]);
 		}
 
@@ -29,14 +27,9 @@ int _printf(const char *format, ...)
 		/*If there is a % sign and after % sign there is c print character*/
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
-		/**
-		* we use int below. Because characters are promoted to int
-		* when passed as variable arguments.
-		*/
 			_putchar(va_arg(argumentList, int));
 			i++;
 		}
-		/*Part of printing string*/
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
 			int stringLength = 0;
@@ -45,10 +38,8 @@ int _printf(const char *format, ...)
 			i++;
 			length += stringLength - 1;
 		}
-        	/*Part of printting '%'*/
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
-			/*write(1, "%", 1);*/
 			_putchar('%');
 			i++;
 		}
