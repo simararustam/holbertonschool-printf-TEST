@@ -24,7 +24,7 @@ int _itoa(int value)
 		size++;
 	} while (temp);
 	
-	str = malloc(size);
+	str = malloc(size + 1);
 	
 	if (str == NULL)
 		exit(EXIT_FAILURE);
