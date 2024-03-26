@@ -1,6 +1,6 @@
 #include "main.h"
 
-int printPercent()
+int printPercent(const char *format)
 {
     	/*Part of printting '%'*/
 	if (format[i] == '%' && format[i + 1] == '%')
