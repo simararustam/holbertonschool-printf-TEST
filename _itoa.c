@@ -20,23 +20,17 @@ int itoa(int value)
 	else
 		n = value;
 
-	if (n == 0)
-	{
-		str[i++] = '0';
-		size++;
-	}
-	else
-	{
-		while (n > 0)
-		{
-			str[i++] = '0' + (n % 10);
-			n /= 10;
-			size++;
-		}
-	}
+	i = 0;
 
-	for (j = i; j >= 0; j--)
+	do {
+		str[i++] = '0' + (n % 10);
+		n /= 10;
+		size++;
+	} while (n > 0);
+	for (j = i - 1; j >= 0; j--)
+	{
 		_putchar(str[j]);
+	}
 
 	return (size);
 }
