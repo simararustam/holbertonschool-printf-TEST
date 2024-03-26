@@ -7,36 +7,41 @@
  *@a: given integer
  *Return: size of returned integer
  */
-int _itoa(int a)
+int _itoa(int value)
 {
-	char *buffer;
-	int temp = a, size = 0, is_negative = 0, k = 0;
+	char *str;
+	int size = 0, i = 0, j, n, temp;
 
-	if (a < 0)
-		is_negative = 1;
-	do {
-		temp /= 10;
-		size++;
-	} while (temp);
-	if (is_negative)
-	{
-		if (a == INT_MIN)
-			a += 1, k = 1;
-		size++;
-		a *= -1;
-	}
-	buffer = malloc(size);
-	if (buffer == NULL)
-		exit(77);
-	temp = 0;
-	for (temp = size - 1; temp >= 0; temp--)
-	{
-		buffer[temp] = a % 10 + '0';
-		a /= 10;
-	}
-	if (k)
-		buffer[size - 1] += 1;
-	if (is_negative)
-		buffer[0] = '-';
-	return (size);
+   	 if (value < 0) 
+   	 {
+		 putchar('-');
+		 n = -value;
+		 size++;
+    	} 
+    	else if (value == 0) 
+  		size++;
+    	else 
+        	n = value;
+
+    	temp = n;
+    	do {
+        	n /= 10;
+        	size++;
+    	} while (n);
+    	str = malloc(size);
+	
+    	/* Reset n to its original value for conversion to string */
+    	n = temp;
+    	i = 0;
+    	do {
+        	str[i++] = (n % 10) + '0';
+        	n /= 10;
+    	} while (n);
+
+    	for (j = size - 1; j >= 0; j--) {
+        	putchar(str[j]);
+    	}
+
+    	free(str);
+    	return (size);
 }
