@@ -2,7 +2,6 @@
 #include "main.h"
 int main(void)
 {
-	char c = 'a';
-	_decimal(2);
+	_printf("Len:[%d]\n", 12);	
 	return (0);
 }
