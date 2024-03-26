@@ -19,6 +19,7 @@ int _itoa(int value)
 	}
 	else
 		n = value;
+	temp = n;
 	do {
 		temp /= 10;
 		size++;
