@@ -9,7 +9,7 @@
 int _itoa(int value)
 {
 	char *str;
-	int size = 0, i = 0, j, n, temp;
+	int size = 0, i = 0, j, n;
 
 	if (value < 0)
 	{
@@ -17,24 +17,29 @@ int _itoa(int value)
 		n = -value;
 		size++;
 	}
+	else if (value == 0)
+	{
+		n = value;
+		size++;
+	}
 	else
 		n = value;
 
 	do {
-		temp /= 10;
+		n /= 10;
 		size++;
-	} while (temp !=  0);
+	} while (n);
 
-	str = malloc(size);
+	str = malloc(size + 1);
 
 	i = 0;
+	str[i] = '\0';
 	do {
 		str[i++] = '0' + (n % 10);
 		n /= 10;
 	} while (n > 0);
-	str[i] = '\0';
 
-	for (j = i - 1; j >= 0; j--)
+	for (j = i; j >= 0; j--)
 	{
 		_putchar(str[j]);
 	}
