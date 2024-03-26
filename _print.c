@@ -35,7 +35,12 @@ int _printf(const char *format, ...)
 		{
 			length += _itoa(va_arg(argumentList, int));
 			i++;
+		}		
+		else if (format[i] == '%' && format[i + 2] == NULL))
+		{
+			length = 0;
 		}
+
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
 			_putchar('%');
