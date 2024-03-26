@@ -29,7 +29,8 @@ int _printf(const char *format, ...)
 		/*If there is a % sign and after % sign there is c print character*/
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
-			/*we use int below. Because characters are promoted to int when passed as variable arguments.*/
+			/*we use int below. Because characters are promoted to int
+   			when passed as variable arguments.*/
 			_putchar(va_arg(argumentList, int));
 			i++;
 		}
