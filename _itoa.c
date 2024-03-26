@@ -21,9 +21,9 @@ int _itoa(int value)
 		n = value;
 	
 	do {
-		temp /= 10;
+		n /= 10;
 		size++;
-	} while (temp != 0);
+	} while (n > 0);
 	
 	str = malloc(size);
 
