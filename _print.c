@@ -45,23 +45,6 @@ int _printf(const char *format, ...)
 			i++;
 			length += stringLength - 1;
 		}
-		/*Part of printting '%'*/
-		else if (format[i] == '%' && format[i + 1] == '%')
-		{
-			/*write(1, "%", 1);*/
-			_putchar('%');
-			i++;
-		}
-
-		else if (format[0] == '%'  && format[1] == '\0')
-		{
-			return (-1);
-		}
-
-		else if (format[i] == '%'  && format[i + 1] != '%')
-		{
-			_putchar(format[i]);
-		}
         
 		length += 1;
 
