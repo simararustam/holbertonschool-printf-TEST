@@ -27,14 +27,10 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
-			j = 0;
 			char *str = va_arg(argList, char *);
 
-			while (str[j] != 0)
-			{
+			for (j = 0; str[j] != 0; j++)
 				_putchar(str[j]);
-				j++;
-			}
 			i++;
 		}
 		else if (format[i] == '%' && format[i + 1] == '%')
