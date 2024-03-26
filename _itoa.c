@@ -43,5 +43,5 @@ int _itoa(int value)
     	}
 
     	free(str);
-    	return (size + 1);
+    	return (size);
 }
