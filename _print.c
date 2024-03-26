@@ -33,10 +33,8 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
-			int numberLength = 0;
 			length += _itoa(va_arg(argumentList, int));
 			i++;
-			length = numberLength - 1;
 		}
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
