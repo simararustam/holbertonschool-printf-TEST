@@ -7,7 +7,7 @@
  */
 int _itoa(int value)
 {
-	char str[1000000];
+	char *str;
 	int size = 0, i = 0, j;
 	int n;
 
@@ -19,14 +19,20 @@ int _itoa(int value)
 	}
 	else
 		n = value;
+	
+	do {
+		n /= 10;
+		size++;
+	} while (n);
+
+	str = malloc(size);
 
 	i = 0;
-
 	do {
 		str[i++] = '0' + (n % 10);
 		n /= 10;
-		size++;
 	} while (n > 0);
+
 	for (j = i - 1; j >= 0; j--)
 	{
 		_putchar(str[j]);
