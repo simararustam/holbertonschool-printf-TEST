@@ -23,7 +23,7 @@ int _itoa(int value)
 		temp /= 10;
 		size++;
 	} while (temp != 0);
-	str = malloc((size + 1) * sizeof(char));
+	str = malloc(size);
 	
 	i = 0;
 	do {
