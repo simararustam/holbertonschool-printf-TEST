@@ -20,19 +20,19 @@ int _printf(const char *format, ...)
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
-        	{
-            		/*If there is no type specifier just print what we have*/
-            		_putchar(format[i]);
-        	}
-        
+		{
+			/*If there is no type specifier just print what we have*/
+			_putchar(format[i]);
+		}
+		
 		/*Part of printing character*/
-        	/*If there is a % sign and after % sign there is c print character*/
-        	if (format[i] == '%' && format[i + 1] == 'c')
-       		{
+		/*If there is a % sign and after % sign there is c print character*/
+		if (format[i] == '%' && format[i + 1] == 'c')
+		{
 			/*we use int below. Because characters are promoted to int when passed as variable arguments.*/
-            		_putchar(va_arg(argumentList, int));
-            		i++;
-        	}
+			_putchar(va_arg(argumentList, int));
+			i++;
+		}
 		/*Part of printing string*/
 		else if (format[i] == '%' && format[i + 1] == 's')
 		{
