@@ -2,7 +2,7 @@
 #include "main.h"
 #include <stdlib.h>
 /**
- *itoa - change integer to string
+ *_itoa - change integer to string
  *@value: given integer
  *Return: size of returned integer
  */
