@@ -32,7 +32,7 @@ int _printf(const char *format, ...)
 		/**
 		* we use int below. Because characters are promoted to int
 		* when passed as variable arguments.
-	 	*/
+		*/
 			_putchar(va_arg(argumentList, int));
 			i++;
 		}
