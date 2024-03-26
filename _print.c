@@ -12,7 +12,6 @@ int _printf(const char *format, ...)
 {
 	va_list argumentList; /*List of Arguments*/
 	int length = 0, i; /*Number of characters*/
-	char *str;
 
 	va_start(argumentList, format); /*Initialize argumentiList*/
 	for (i = 0; format[i] != '\0'; i++)
@@ -34,8 +33,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
-			str = _itoa(va_arg(argumentList, char *));
-			length += write(1, str, _puts(str));
+			length += _itoa(va_arg(argumentList, int));
 			i++;
 		}
 		if (format[i] == '%' && format[i + 1] == '%')
