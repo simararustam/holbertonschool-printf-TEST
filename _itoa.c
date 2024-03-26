@@ -38,8 +38,6 @@ int _itoa(int value)
         	n /= 10;
     	} while (n);
 
-    	str[i] = '\0';
-
     	for (j = size - 1; j >= 0; j--) {
         	putchar(str[j]);
     	}
