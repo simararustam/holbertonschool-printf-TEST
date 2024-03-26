@@ -19,10 +19,11 @@ int _itoa(int value)
 	}
 	else
 		n = value;
+	int temp = n;
 	do {
-		n /= 10;
+		temp /= 10;
 		size++;
-	} while (n != 0);
+	} while (temp != 0);
 	
 	str = malloc(size + 1);
 
