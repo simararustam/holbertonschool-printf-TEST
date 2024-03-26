@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <stddef.h>
 #include <unistd.h>
+#include "_percent.c"
 
 /**
  * _printf - print something
