@@ -33,7 +33,6 @@ int _itoa(int value)
 	str = malloc(size + 1);
 
 	i = 0;
-	str[i] = '\0';
 	do {
 		str[i++] = '0' + (n % 10);
 		n /= 10;
