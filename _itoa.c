@@ -6,32 +6,38 @@
  *@value: given integer
  *Return: size of returned integer
  */
-int _itoa(int value)
+char *_itoa(int value)
 {
-	char str[1000000];
-	int size = 0, i = 0, j;
-	int n;
+	char *str;
+	int size = 0, i = 0, j, n, temp;
 
 	if (value < 0)
 	{
-		_putchar('-');
 		n = -value;
 		size++;
 	}
 	else
 		n = value;
-
+	do {
+		temp /= 10;
+		size++;
+	} while (temp != 0);
+	str = (char*)malloc((size + 1) * sizeof(char));
+	
 	i = 0;
+	if (value < 0)
+		str[i++] = '-';
 	do {
 		str[i++] = '0' + (n % 10);
 		n /= 10;
-		size++;
-	} while (n > 0);
+	} while (n != 0);
 
-	for (j = i - 1; j >= 0; j--)
-	{
-		_putchar(str[j]);
-	}
+   	 for (j = 0; j < i / 2; j++) 
+	 {
+        	char temp = str[j];
+        	str[j] = str[i - j - 1];
+        	str[i - j - 1] = temp;
+	 }
 
-	return (size);
+	return (str);
 }
