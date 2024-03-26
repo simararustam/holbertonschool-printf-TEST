@@ -5,7 +5,7 @@
  *@value: given integer
  *Return: size of returned integer
  */
-int itoa(int value)
+int _itoa(int value)
 {
 	char str[1000000];
 	int size = 0, i = 0, j;
