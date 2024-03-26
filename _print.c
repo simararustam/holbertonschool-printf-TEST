@@ -35,7 +35,6 @@ int _printf(const char *format, ...)
 		{
 			char number;
 			number += _itoa(va_arg(argumentList, int));
-			_putchar(number);
 			i++;
 		}		
 
