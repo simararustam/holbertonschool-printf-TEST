@@ -1,43 +1,40 @@
-#include <stdio.h>
-#include "main.h"
 #include <stdlib.h>
+#include <limits.h>
 /**
- *itoa - change integer to string
- *@value: given integer
- *Return: size of returned integer
- */
-int _itoa(int value)
+  * itoa - function for make string from numbers
+  * @a: number
+  * Return: string
+  */
+char *itoa(int a)
 {
-	char *str;
-	int size = 0, i = 0, j, n;
+	char *buffer;
+	int temp = a, size = 0, is_negative = 0, k = 0;
 
-	if (value < 0)
-	{
-		_putchar('-');
-		n = -value;
-		size++;
-	}
-	else
-		n = value;
-	
+	if (a < 0)
+		is_negative = 1;
 	do {
-		n /= 10;
+		temp /= 10;
 		size++;
-	} while (n > 0);
-	
-	str = malloc(size);
-
-	i = 0;
-	do {
-		str[i++] = '0' + (n % 10);
-		n /= 10;
-	} while (n > 0);
-	str[i] = '\0';
-
-	for (j = i - 1; j >= 0; j--)
+	} while (temp);
+	if (is_negative)
 	{
-		_putchar(str[j]);
+		if (a == INT_MIN)
+			a += 1, k = 1;
+		size++;
+		a *= -1;
 	}
-	free(str);
-	return (size);
+	buffer = malloc(size);
+	if (buffer == NULL)
+		exit(77);
+	temp = 0;
+	for (temp = size - 1; temp >= 0; temp--)
+	{
+		buffer[temp] = a % 10 + '0';
+		a /= 10;
+	}
+	if (k)
+		buffer[size - 1] += 1;
+	if (is_negative)
+		buffer[0] = '-';
+	return (buffer);
 }
