@@ -6,7 +6,7 @@
  *@value: given integer
  *Return: size of returned integer
  */
-char *_itoa(int value)
+int _itoa(int value)
 {
 	char *str;
 	int size = 0, i = 0, j, n, temp;
@@ -32,12 +32,10 @@ char *_itoa(int value)
 		n /= 10;
 	} while (n != 0);
 
-   	 for (j = 0; j < i / 2; j++) 
-	 {
-        	char temp = str[j];
-        	str[j] = str[i - j - 1];
-        	str[i - j - 1] = temp;
-	 }
+	for (j = i - 1; j >= 0; j--)
+	{
+		_putchar(str[j]);
+	}
 
-	return (str);
+	return (size);
 }
