@@ -12,7 +12,7 @@ int _printf(const char *format, ...)
 {
 	va_list argumentList; /*List of Arguments*/
 	int length = 0, i; /*Number of characters*/
-	
+
 	va_start(argumentList, format); /*Initialize argumentiList*/
 	for (i = 0; format[i] != '\0'; i++)
 	{
