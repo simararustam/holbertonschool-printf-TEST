@@ -1,4 +1,7 @@
 #include "main.h"
+
+int printPercent()
+{
     	/*Part of printting '%'*/
 	if (format[i] == '%' && format[i + 1] == '%')
 	{
@@ -16,3 +19,4 @@
 	{
 		_putchar(format[i]);
 	}
+}
