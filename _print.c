@@ -11,9 +11,7 @@
 int _printf(const char *format, ...)
 {
 	va_list argumentList; /*List of Arguments*/
-	int length = 0; /*Number of characters*/
-	int i; /*i is used for loop. Index of format string*/
-
+	int length = 0; int i; /*Number of characters*/
 	va_start(argumentList, format); /*Initialize argumentiList*/
 	for (i = 0; format[i] != '\0'; i++)
 	{
