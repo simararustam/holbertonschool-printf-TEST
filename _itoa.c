@@ -9,7 +9,7 @@
 int _itoa(int value)
 {
 	char *str;
-	int size = 0, i = 0, j, n, temp;
+	int size = 0, i = 0, j, n;
 
 	if (value < 0)
 	{
