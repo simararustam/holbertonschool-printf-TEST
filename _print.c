@@ -15,16 +15,12 @@ int _printf(const char *format, ...)
 	int i; /*i is used for loop. Index of format string*/
 
 	va_start(argumentList, format); /*Initialize argumentiList*/
-
 	for (i = 0; format[i] != '\0'; i++)
 	{
 		if (format[i] != '%')
 		{
 			_putchar(format[i]);
 		}
-
-		/*Part of printing character*/
-		/*If there is a % sign and after % sign there is c print character*/
 		if (format[i] == '%' && format[i + 1] == 'c')
 		{
 			_putchar(va_arg(argumentList, int));
@@ -43,19 +39,16 @@ int _printf(const char *format, ...)
 			_putchar('%');
 			i++;
 		}
-
 		else if (format[0] == '%'  && format[1] == '\0')
 		{
 			return (-1);
 		}
-
 		else if (format[i] == '%'  && format[i + 1] != '%')
 		{
 			_putchar(format[i]);
 		}
 		length += 1;
 	}
-
 	va_end(argumentList);
 	return (length);
 }
