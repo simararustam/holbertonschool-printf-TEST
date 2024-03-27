@@ -37,7 +37,7 @@ int _itoa(int value)
 	do {
 		str[i++] = (n % 10) + '0';
 		n /= 10;
-	} while (n);
+	} while (n != 0);
 
 	for (j = size - 1; j >= 0; j--)
 	{
