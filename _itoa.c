@@ -19,7 +19,8 @@ int _itoa(int value)
 		n = -value;
 		size++;
 	}
-	/* else if (value == 0)
+	/* 
+ 	else if (value == 0)
 	 	size++; */
 	else
 		n = value;
