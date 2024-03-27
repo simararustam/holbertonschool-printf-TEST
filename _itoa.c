@@ -12,15 +12,15 @@ int _itoa(int value)
 	char *str;
 	int size = 0, i = 0, j, n, temp;
 
-   	 if (value < 0) 
-   	 {
-		 putchar('-');
-		 n = -value;
-		 size++;
-    	} 
+   	 if (value < 0)
+	 {
+		putchar('-');
+		n = -value;
+		size++;
+    	}
     	else if (value == 0) 
-  		size++;
-    	else 
+		size++;
+	else 
         	n = value;
 
     	temp = n;
