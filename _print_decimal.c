@@ -1,5 +1,5 @@
 #include "main.h"
-
+/*File created for testin printing integer*/
 /**
  * print_decimal - This is decimal
  * @r: count of numbers
