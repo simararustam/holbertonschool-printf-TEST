@@ -33,18 +33,9 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
-			char *p_buff;
-			int size;
-			/*
-			* length += _itoa(va_arg(argumentList, int)) - 1;
-			* i++;
-			*/
-
-			p_buff = itoa(va_arg(argumentList, int), 10);
-
-			size = _puts((p_buff != NULL) ? p_buff : "NULL");
-
-			return (size);
+			
+			length += _itoa(va_arg(argumentList, int)) - 1;
+			i++;
 		}
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
