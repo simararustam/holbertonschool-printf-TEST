@@ -30,7 +30,7 @@ int _itoa(int value)
 		size++;
 	} while (n > 0);
 	
-	str = malloc(size + 1);
+	str = malloc(size);
 
 	/*Reset n to its original value for conversion to string */
 	n = temp;
@@ -44,7 +44,7 @@ int _itoa(int value)
 	{
 		putchar(str[j]);
 	}
-	str[size] = 0;
+	str[size - 1] = 0;
 	/*free(str);*/
 	return (size);
 }
