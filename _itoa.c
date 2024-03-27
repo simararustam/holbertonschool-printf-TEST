@@ -21,7 +21,7 @@ int _itoa(int value)
 	}
 	/*
  	else if (value == 0)
- 	size++;
+	size++;
 	*/
 	else
 		n = value;
