@@ -34,13 +34,10 @@ int _printf(const char *format, ...)
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
 			int integerLength = 0;
-			int length1 = 0;  
-			integerLength += _itoa(va_arg(argumentList, int));
+			integerLength += _itoa(va_arg(argumentList, int)) - 1;
 			i++;
 
 			length = integerLength - 1;
-			length1 = length - 1;
-			length = length1;
 		}
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
