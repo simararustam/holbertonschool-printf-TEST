@@ -39,7 +39,7 @@ int _itoa(int value)
 		n /= 10;
 	} while (n);
 
-	for (j = size - 1; j >= 0; j--)
+	for (j = size - 1; j >= 1; j--)
 	{
 		putchar(str[j]);
 	}
