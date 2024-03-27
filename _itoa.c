@@ -28,7 +28,8 @@ int _itoa(int value)
 	do {
 		n /= 10;
 		size++;
-	} while (n);
+	} while (n > 0);
+	
 	str = malloc(size + 1);
 
 	/*Reset n to its original value for conversion to string */
