@@ -6,4 +6,5 @@ int _itoa(int value);
 int _printf(const char *format, ...);
 int _putchar(char c);
 int _puts(char *str);
+char *itoa(long int num, int base);
 #endif
