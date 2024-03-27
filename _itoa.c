@@ -29,7 +29,7 @@ int _itoa(int value)
 		n /= 10;
 		size++;
 	} while (n);
-	str = malloc(size);
+	str = malloc(size + 1);
 
 	/*Reset n to its original value for conversion to string */
 	n = temp;
