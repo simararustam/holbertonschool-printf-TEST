@@ -35,8 +35,10 @@ int _printf(const char *format, ...)
 		{
 			char *p_buff;
 			int size;
-			length += _itoa(va_arg(argumentList, int)) - 1;
-			i++;
+			/*
+			* length += _itoa(va_arg(argumentList, int)) - 1;
+			* i++;
+			*/
 
 			p_buff = itoa(va_arg(argumentList, int), 10);
 
