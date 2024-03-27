@@ -44,6 +44,6 @@ int _itoa(int value)
 		putchar(str[j]);
 	}
 
-	free(str);
+	/*free(str);*/
 	return (size);
 }
