@@ -13,7 +13,7 @@ int _itoa(int num)
     int i = 0, j, temp, len = 0;
     int isNegative = 0;
     char *str;
-    // Handle negative numbers
+
     if (num < 0) {
         isNegative = 1;
         num = -num;
