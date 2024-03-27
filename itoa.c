@@ -26,7 +26,7 @@ char *itoa(long int num, int base)
     if (num < 0 && base == 10)
         *--ptr = '-';
 
-    if (num == 0) // Handle zero case
+    if (num == 0)
         *--ptr = '0';
 
     return ptr;
