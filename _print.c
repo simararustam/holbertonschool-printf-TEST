@@ -35,7 +35,7 @@ int _printf(const char *format, ...)
 		{
 			int integerLength = 0;
 			
-			length += _itoa(va_arg(argumentList, int));
+			integerLength += _itoa(va_arg(argumentList, int));
 			i++;
 			length += integerLength - 1;
 		}
