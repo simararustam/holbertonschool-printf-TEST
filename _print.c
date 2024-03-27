@@ -65,7 +65,7 @@ int _printf(const char *format, ...)
 					len = len + _putchar(((abs / countn) % 10) + '0');
 					countn = countn / 10;
 				}
-				return (len);
+				return (len - 1);
 		
 			}
 		}
