@@ -2,33 +2,38 @@
 
 /**
  * itoa - Convert a long integer to its ASCII representation in a given base.
- * @num: The number to convert.
- * @base: The base of the number system to convert to.
- *
- * Return: A pointer to the converted string.
+ * @value: value.
+ * Return: A size.
  */
-char *itoa(long int num, int base)
+int itoa(int value)
 {
-	static char *array = "0123456789abcdef";
-	static char buffer[50];
-	char sign = 0;
-	char *ptr;
-	unsigned long n = num;
+    char buffer[12];
+    int i = 0, size = 0;
+    int isNegative = 0;
 
-	if (num < 0)
-	{
-		n = -num;
-		sign = '-';
-	}
-	ptr = &buffer[49];
-	*ptr = '\0';
+    if (value < 0)
+    {
+        isNegative = 1;
+        value = -value;
+        size++;
+    }
 
-	do      {
-		*--ptr = array[n % base];
-		n /= base;
-	} while (n != 0);
 
-	if (sign)
-		*--ptr = sign;
-	return (ptr);
+    do {
+        buffer[i++] = (value % 10) + '0';
+        value /= 10;
+        size++;
+    } while (value > 0);
+
+
+    if (isNegative)
+        buffer[i++] = '-';
+
+
+    for (int j = i - 1; j >= 0; j--)
+    {
+        putchar(buffer[j]);
+    }
+
+    return size;
 }
