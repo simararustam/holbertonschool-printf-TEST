@@ -43,7 +43,7 @@ int _printf(const char *format, ...)
 
 			len = 0;
 
-			value = va_arg(args, int);
+			value = va_arg(argumentList, int);
 
 			if (value < 0)
 			{
@@ -51,6 +51,7 @@ int _printf(const char *format, ...)
 				abs = value * -1;
 			}
 			else
+			{
 				abs = value;
 
 				a = abs;
@@ -65,6 +66,8 @@ int _printf(const char *format, ...)
 					countn = countn / 10;
 				}
 				return (len);
+		
+			}
 		}
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
