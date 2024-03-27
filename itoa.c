@@ -10,7 +10,7 @@ int _itoa(int value)
     char buffer[12];
     int i = 0, size = 0;
     int isNegative = 0;
-
+    int j;
 
     if (value < 0)
     {
@@ -31,7 +31,6 @@ int _itoa(int value)
         buffer[i++] = '-';
 
 
-    int j;
     for (j = i - 1; j >= 0; j--)
     {
         _putchar(buffer[j]);
