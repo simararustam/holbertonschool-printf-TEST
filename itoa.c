@@ -10,10 +10,10 @@
 char *itoa(long int num, int base)
 {
     static char *array = "0123456789abcdef";
-    static char buffer[65]; // Buffer size for binary representation of long int
+    static char buffer[65];
     char sign = 0;
     char *ptr;
-    unsigned long n = (num < 0 && base == 10) ? -num : num; // Handle negative numbers
+    unsigned long n = (num < 0 && base == 10) ? -num : num;
 
     ptr = &buffer[sizeof(buffer) - 1];
     *ptr = '\0';
