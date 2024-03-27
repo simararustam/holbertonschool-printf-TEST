@@ -42,7 +42,7 @@ int _printf(const char *format, ...)
 
 			p_buff = itoa(va_arg(argumentList, int), 10);
 
-			size = _putchar((p_buff != NULL) ? p_buff : "NULL");
+			size = _puts((p_buff != NULL) ? p_buff : "NULL");
 
 			return (size);
 		}
