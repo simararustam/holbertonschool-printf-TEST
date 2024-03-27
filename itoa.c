@@ -5,11 +5,12 @@
  * @value: value.
  * Return: A size.
  */
-int itoa(int value)
+int _itoa(int value)
 {
     char buffer[12];
     int i = 0, size = 0;
     int isNegative = 0;
+
 
     if (value < 0)
     {
@@ -29,7 +30,9 @@ int itoa(int value)
     if (isNegative)
         buffer[i++] = '-';
 
-    for (int j = i - 1; j >= 0; j--)
+
+    int j;
+    for (j = i - 1; j >= 0; j--)
     {
         _putchar(buffer[j]);
     }
