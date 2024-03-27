@@ -19,9 +19,10 @@ int _itoa(int value)
 		n = -value;
 		size++;
 	}
-	/* 
- 	else if (value == 0)
-	 	size++; */
+	/*
+	else if (value == 0)
+	 	size++;
+   	*/
 	else
 		n = value;
 
@@ -30,7 +31,7 @@ int _itoa(int value)
 		n /= 10;
 		size++;
 	} while (n > 0);
-	
+
 	str = malloc(size);
 
 	/*Reset n to its original value for conversion to string */
