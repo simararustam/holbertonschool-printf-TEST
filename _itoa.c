@@ -50,7 +50,7 @@ int _itoa(int num)
 		_putchar(str[j]);
 
 	if(k)
-	    str[len - 1] += 1;
+	    str[i - 1] += 1;
 
 	len = 0;
 	len = _puts(str);
