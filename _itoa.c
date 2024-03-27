@@ -10,15 +10,15 @@
  */
 int _itoa(int num)
 {
-    int i = 0, j, temp, len = 0;
-    int isNegative = 0;
-    char *str;
+	int i = 0, j, temp, len = 0;
+	int isNegative = 0;
+	char *str;
 
-    if (num < 0) {
-        isNegative = 1;
-        num = -num;
-        len++;
-    }
+    	if (num < 0) {
+        	isNegative = 1;
+        	num = -num;
+       		len++;
+    	}
 
 	temp = num;
 	do {
@@ -28,14 +28,14 @@ int _itoa(int num)
 	str = malloc(len);
 
 	num = temp;
-    do {
-        str[i++] = num % 10 + '0';
-        num /= 10;
-    } while (num > 0);
+    	do {
+        	str[i++] = num % 10 + '0';
+        	num /= 10;
+    	} while (num > 0);
     
-    if (isNegative)
-        str[i++] = '-';
-    str[i] = '\0';
+    	if (isNegative)
+        	str[i++] = '-';
+    	str[i] = '\0';
 
 	for (j = i - 1; j >= 0; j--)
 	{
