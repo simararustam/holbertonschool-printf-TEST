@@ -29,10 +29,9 @@ int itoa(int value)
     if (isNegative)
         buffer[i++] = '-';
 
-
     for (int j = i - 1; j >= 0; j--)
     {
-        putchar(buffer[j]);
+        _putchar(buffer[j]);
     }
 
     return size;
