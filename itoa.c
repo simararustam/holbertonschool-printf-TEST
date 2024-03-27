@@ -9,25 +9,26 @@
  */
 char *itoa(long int num, int base)
 {
-    static char *array = "0123456789abcdef";
-    static char buffer[65];
-    char *ptr;
-    unsigned long n = (num < 0 && base == 10) ? -num : num;
+	static char *array = "0123456789abcdef";
+	static char buffer[50];
+	char sign = 0;
+	char *ptr;
+	unsigned long n = num;
 
-    ptr = &buffer[sizeof(buffer) - 1];
-    *ptr = '\0';
+	if (num < 0)
+	{
+		n = -num;
+		sign = '-';
+	}
+	ptr = &buffer[49];
+	*ptr = '\0';
 
-    do {
-        *--ptr = array[n % base];
-        n /= base;
-    } while (n != 0);
+	do      {
+		*--ptr = array[n % base];
+		n /= base;
+	} while (n != 0);
 
-    if (num < 0 && base == 10)
-        *--ptr = '-';
-
-    if (num == 0)
-        *--ptr = '0';
-
-    return ptr;
+	if (sign)
+		*--ptr = sign;
+	return (ptr);
 }
-
