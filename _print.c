@@ -33,41 +33,8 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
-			/*
-			* length += itoa(va_arg(argumentList, int)) - 1;
+			* length += _itoa(va_arg(argumentList, int)) - 1;
 			* i++;
-			*/
-			int value;
-			unsigned int abs, a, len;
-			unsigned int countn = 1;
-
-			len = 0;
-
-			value = va_arg(argumentList, int);
-
-			if (value < 0)
-			{
-				len = len + _putchar('-');
-				abs = value * -1;
-			}
-			else
-			{
-				abs = value;
-
-				a = abs;
-				while (a > 9)
-				{
-					a = a / 10;
-					countn = countn * 10;
-				}
-				while (countn >= 1)
-				{
-					len = len + _putchar(((abs / countn) % 10) + '0');
-					countn = countn / 10;
-				}
-				return (len - 1);
-		
-			}
 		}
 		if (format[i] == '%' && format[i + 1] == '%')
 		{
