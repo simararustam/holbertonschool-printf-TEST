@@ -33,7 +33,7 @@ int _printf(const char *format, ...)
 		}
 		else if (format[i] == '%' && (format[i + 1] == 'd' || format[i + 1] == 'i'))
 		{
-			int n;
+			int n = 0;
 			length += print_number(n, va_arg(argumentList, int));
 			i++;
 
