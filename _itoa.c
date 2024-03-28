@@ -49,12 +49,9 @@ int _itoa(int num)
 
 	for (j = i - 1; j >= 0; j--)
 		_putchar(str[j]);
-
 	if (k)
 		str[i - 1] += 1;
-
 	len = 0;
 	len = _putsnumber(str);
-
 	return (len);
 }
