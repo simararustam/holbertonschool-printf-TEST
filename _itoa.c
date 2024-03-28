@@ -16,13 +16,9 @@ int _itoa(int num)
 
 	if (num < 0)
 	{
-		/*
-		* isNegative = 1;
-		* num = -num;
-		* len++;
-		*/
-		_putchar('-');
-		num = num == INT_MIN ? INT_MAX : num * -1;
+		isNegative = 1;
+		num = -num;
+		len++;
 	}
 	temp = num;
 	do {
