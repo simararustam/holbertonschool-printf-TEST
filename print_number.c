@@ -1,10 +1,10 @@
 #include "main.h"
 
 /**
- * print_number - This is decimal
- * @r: count of numbers
- * @s: number string
- * Return: 0 Successful
+ * print_number - change string to integer
+ * @r: length of numbers
+ * @s: number
+ * Return: length of str
  */
 int print_number(unsigned int r, int s)
 {
