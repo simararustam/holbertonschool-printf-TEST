@@ -54,7 +54,7 @@ int _itoa(int num)
 		str[i - 1] += 1;
 
 	len = 0;
-	len = _puts(str);
+	len = _putsnumber(str);
 
 	return (len);
 }
