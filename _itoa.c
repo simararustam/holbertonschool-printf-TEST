@@ -28,8 +28,7 @@ int _itoa(int num)
 	if (isNegative)
 	{
 		if (num == INT_MIN)
-			/*num += 1, k = 1;*/
-			_puts("-2147483648");
+			num += 1, k = 1;
 	}
 	str = malloc(len);
 	if (str == NULL)
