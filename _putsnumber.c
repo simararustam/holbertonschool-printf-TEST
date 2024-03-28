@@ -6,7 +6,7 @@
  * @str: string
  * Return: void
  */
-int _puts(char *str)
+int _putsnumber(char *str)
 {
 	int length;
 
