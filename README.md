@@ -1,24 +1,27 @@
-##Our Printf Function
-This repository contains a custom implementation of the printf function in the C programming language. The printf function is used to print formatted output to the standard output stream (stdout).
+# printf Function Implementation
 
-#Files
+This C program implements a simplified version of the `printf` function. The `printf` function in C is used to print formatted output to the standard output (usually the console).
 
-main.h: Header file containing function prototypes and necessary includes.
-main.c: Source code file containing the implementation of the custom printf function.
-#Function Description
-int _printf(const char *format, ...)
-This function takes a format string (format) and a variable number of arguments (...). It processes the format string and prints the formatted output to the standard output stream.
+## File Structure
 
-Parameters
-format: A pointer to a constant character string that specifies the format of the output. This string can contain format specifiers such as %c, %s, %d, %i, and %%.
-...: Variable number of arguments that correspond to the format specifiers in the format string.
-Return Value
-The function returns an integer value representing the number of characters printed to the standard output stream. If an error occurs, it returns -1.
+- `main.h`: Header file containing function prototypes and necessary library includes.
+- `printf.c`: Source file containing the implementation of the `_printf` function.
+- `main.c`: Example usage of the `_printf` function.
 
-Format Specifiers
-%c: Print a single character.
-%s: Print a string.
-%d or %i: Print a decimal integer.
-%%: Print a percent sign.
-Usage
-To use the custom printf function, include the main.h header file in your C program and call the _printf function with the desired format string and arguments.
+## Compilation
+
+To compile the program, use a C compiler such as GCC:
+
+```bash
+gcc main.c printf.c -o my_printf
+
+### Usage
+In your C code, include the main.h header file, and you can use the _printf function to print formatted output. The _printf function supports the following format specifiers:
+
+| Symbol | Operation |
+|--|--|
+| `c` | Prints character |
+| `s` | Prints string |
+| `%` | Prints modulus operator |
+| `d` | Prints integer |
+| `i` | Also prints integer |
