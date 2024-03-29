@@ -50,3 +50,4 @@ This implementation is simplified and may not cover all edge cases or advanced f
 - Simara Kerimli [simararustam](https://github.com/simararustam)
 - Nihad Namatli [nihad1213](https://github.com/nihad1213)
 
+![printf](https://github.com/simararustam/holbertonschool-printf-TEST/assets/115341811/3720036d-baef-4522-a75f-e4a5eb983bc1)
