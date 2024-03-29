@@ -1,4 +1,4 @@
-# printf Function Implementation
+# Our printf Function
 
 This C program implements a simplified version of the `printf` function. The `printf` function in C is used to print formatted output to the standard output (usually the console).
 
