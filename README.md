@@ -47,6 +47,6 @@ The `_printf` function takes a format string and variable arguments (variadic ar
 This implementation is simplified and may not cover all edge cases or advanced features of the standard `printf` function.
 
 # Authors
-- Simara Kerimli
-- Nihad Namatli
+- Simara Kerimli [simararustam](https://github.com/simararustam)
+- Nihad Namatli [nihad1213](https://github.com/nihad1213)
 
