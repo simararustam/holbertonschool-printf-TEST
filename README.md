@@ -39,8 +39,8 @@ int main(void) {
 ## Function Explanation
 The `_printf` function takes a format string and variable arguments (variadic arguments) and prints formatted output according to the format specifier in the string. It returns the number of characters printed.
 
--`_printf(const char *format, ...)`: Main function to print formatted output.
--`format`: Format string containing format specifiers.
--`Returns`: Number of characters printed.
+- `_printf(const char *format, ...)`: Main function to print formatted output.
+- `format`: Format string containing format specifiers.
+- `Returns`: Number of characters printed.
 
 
