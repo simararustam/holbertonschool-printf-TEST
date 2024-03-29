@@ -14,8 +14,8 @@ To compile the program, use a C compiler such as GCC:
 
 ```bash
 gcc main.c printf.c -o my_printf
-
-### Usage
+```
+## Usage
 In your C code, include the main.h header file, and you can use the _printf function to print formatted output. The _printf function supports the following format specifiers:
 
 | Symbol | Operation |
