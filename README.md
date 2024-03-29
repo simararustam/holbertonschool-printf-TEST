@@ -43,4 +43,5 @@ The `_printf` function takes a format string and variable arguments (variadic ar
 - `format`: Format string containing format specifiers.
 - `Returns`: Number of characters printed.
 
-
+## Note
+This implementation is simplified and may not cover all edge cases or advanced features of the standard `printf` function.
