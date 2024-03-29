@@ -25,8 +25,4 @@ In your C code, include the main.h header file, and you can use the _printf func
 | `%` | Prints modulus operator |
 | `d` | Prints integer |
 | `i` | Also prints integer |
-| `h` | Converts from decimal and prints lowercase hexadecimal |
-| `H` | Converts from decimal and prints lowercase hexadecimal |
-| `r` | Reverses and prints string |
-| `R` | Encodes and prints string using `rot13` |
 
