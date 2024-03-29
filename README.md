@@ -26,3 +26,13 @@ In your C code, include the main.h header file, and you can use the _printf func
 | `d` | Prints integer |
 | `i` | Also prints integer |
 
+## Example Usage
+#include "main.h"
+#include <stdio.h>
+
+int main(void) {
+    _printf("Hello, %s! This is a number: %d\n", "world", 42);
+    return 0;
+}
+
+
