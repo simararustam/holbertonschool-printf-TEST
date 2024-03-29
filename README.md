@@ -2,6 +2,7 @@
 This repository contains a custom implementation of the printf function in the C programming language. The printf function is used to print formatted output to the standard output stream (stdout).
 
 #Files
+
 main.h: Header file containing function prototypes and necessary includes.
 main.c: Source code file containing the implementation of the custom printf function.
 #Function Description
